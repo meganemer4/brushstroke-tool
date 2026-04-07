@@ -22,5 +22,7 @@ Tips:
 - This tool works best with simpler, organic models. Complex models can get messy and weird.
 - Be sure to remove any roughness maps, normal maps, etc from the shaders before running the script. Otherwise, the strokes might be generated with the wrong texture. Simple shaders with a basecolor texture only are ideal for this. 
 - After getting a desired result, it's best to cache the geo out for rendering, to avoid any accidental updates in the stroke generation.
-- Both Karma and Mantra get similar visual results from this tool, but Mantra renders with this tool can be quite slow in comparison, especially when the density is high. Karma XPU worked the best for me. 
+- Both Karma and Mantra get similar visual results from this tool, but Mantra renders with this tool can be quite slow in comparison, especially when the density is high. Karma XPU worked the best for me.
+- SideFx labs package installation is necessary if running script on any untextured models (need Labs maps baker node)
+- Houdini can be somewhat crashy while generating strokes on multiple assets at once, and sometimes crashes while deleting a brush stroke subnet
   
