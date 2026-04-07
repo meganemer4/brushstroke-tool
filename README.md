@@ -7,7 +7,7 @@ A Python script that generates brush stroke geometry and shaders for assets in H
 
 2. Paste the contents of brush_strokes.py into a Python Shell or run it from a custom shelf tool.
 
-3. Ensure that each asset has either a texture assigned (no more than 1 per asset), or a flat basecolor. To avoid potential issues, create simple materials for each asset that only have a basecolor texture. If generating strokes for an untextured model, a new texture will be baked out based on the basecolor value. 
+3. Ensure that each asset has either a texture assigned (no more than 1 per asset), or a flat basecolor. To avoid potential issues, create simple materials for each asset that only have a basecolor texture. If no textures are present, brush strokes will use whatever color the basecolor is set to. 
  
 4. Select one or more geometry nodes to generate brush strokes for, and run the script.
 
@@ -23,6 +23,5 @@ Tips:
 - Be sure to remove any roughness maps, normal maps, etc from the shaders before running the script. Otherwise, the strokes might be generated with the wrong texture. Simple shaders with a basecolor texture only are ideal for this. 
 - After getting a desired result, it's best to cache the geo out for rendering, to avoid any accidental updates in the stroke generation.
 - Both Karma and Mantra get similar visual results from this tool, but Mantra renders with this tool can be quite slow in comparison, especially when the density is high. Karma XPU worked the best for me.
-- SideFx labs package installation is necessary if running script on any untextured models (need Labs maps baker node)
 - Houdini can be somewhat crashy while generating strokes on multiple assets at once, and sometimes crashes while deleting a brush stroke subnet
   
